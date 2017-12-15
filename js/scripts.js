@@ -9,11 +9,13 @@ const SIZE__CHEESE_DOBLE = 'Doble';
 const NO_CHEESE = 'No Cheese';
 
 const PIZZA_MY_OWN_TYPE = 'My Pizza Type'
+const PIZZA_REGULAR_PRICE = 4;
 
 //variables
 var costumer;
 var items =[];
 var order;
+var pizzaIdController =0;
 
 
 function Customer(customerFirstName, customerLastName, customerEmail, customerPhone, customerAddres, customerState, customerCity, customerZipCode){
@@ -75,7 +77,7 @@ function Order(ordeCostumer, oderCode){
 
 Order.prototype.finnalPrice = function () {//this function calculates the final price of the order.
   var finnalPrice = 0;
-  for(var i =0, i< this.orderItems.length, i++){
+  for(var i =0; i< this.orderItems.length; i++){
     finnalPrice += this.orderItems[i].finnalPrice();
   }
   return finnalPrice;
@@ -87,6 +89,28 @@ $(function(){
   $('#buildPizzaBtn').click(function(event){
     event.preventDefault();
     $('#buildPizzaModal').modal('toggle');
-  })
+  });
+  $('#buildPizzaForm').submit(function(event){
+    event.preventDefault();
+    $('#buildPizzaModal').modal('toggle');
+    var pizzaToppings = [];
+    var pizzaSauces = [];
+    $("input:checkbox[name=topping]:checked").each(function(){
+      var toppingItem = $(this).val();
+      pizzaToppings.push(toppingItem);
+    });
+    $("input:checkbox[name=sauce]:checked").each(function(){
+      var sauceItem = $(this).val();
+      pizzaSauces.push(sauceItem);
+    });
+    var pizzaCheeseSize = $("input:radio[name=cheese]:checked").val();
+    var pizzaSize = $("input:radio[name=size]:checked").val();
+    var pizza = new Pizza(PIZZA_MY_OWN_TYPE, pizzaSize, pizzaCheeseSize, PIZZA_REGULAR_PRICE, pizzaIdController);
+    pizzaIdController++;
+    pizza.pizzaToppings = pizzaToppings;
+    pizza.pizzaSauces = pizzaSauces;
+    pizza.pizzaRegularPrice = pizza.finnalPrice();
+    items.push(pizza);
+  });
 
 })
