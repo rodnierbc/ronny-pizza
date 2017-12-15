@@ -10,6 +10,12 @@ const NO_CHEESE = 'No Cheese';
 
 const PIZZA_MY_OWN_TYPE = 'My Pizza Type'
 
+//variables
+var costumer;
+var items =[];
+var order;
+
+
 function Customer(customerFirstName, customerLastName, customerEmail, customerPhone, customerAddres, customerState, customerCity, customerZipCode){
   this.customerFirstName = customerFirstName;
   this.customerLastName = customerLastName;
@@ -34,7 +40,7 @@ function Pizza(pizzaType, pizzaSize, pizzaCheeseSize, pizzaRegularPrice, pizzaId
   this.pizzaRegularPrice = pizzaRegularPrice;
   this.pizzaId = pizzaId;
 }
-Pizza.prototype.finnalPrice = function () {
+Pizza.prototype.finnalPrice = function () {//this function calculates the final price of a pizza.
   var finnalPrice = this.pizzaRegularPrice;
   var oneTopping = 2;
   var oneSauce = 1;
@@ -57,6 +63,20 @@ Pizza.prototype.finnalPrice = function () {
     case NO_CHEESE:
       finnalPrice -= 1;
       break;
+  }
+  return finnalPrice;
+};
+
+function Order(ordeCostumer, oderCode){
+  this.ordeCostumer = ordeCostumer;
+  this.orderItems =[];
+  this.oderCode = oderCode;
+}
+
+Order.prototype.finnalPrice = function () {//this function calculates the final price of the order.
+  var finnalPrice = 0;
+  for(var i =0, i< this.orderItems.length, i++){
+    finnalPrice += this.orderItems[i].finnalPrice();
   }
   return finnalPrice;
 };
