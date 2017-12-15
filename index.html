@@ -64,7 +64,7 @@
               </div>
               <div class="row menu">
                 <div class="col-md-12">
-                  <button type="button" class="btn">Build your own pizza</button>
+                  <button type="button" id="buildPizzaBtn" class="btn" data-toggle="modal" data-target="#buildPizzaModal">Build your own pizza</button>
                 </div>
               </div>
             </div>
@@ -77,19 +77,99 @@
 
         </div>
       </div>
-      <div class="modal fade" id="yourReciept" role="dialog" aria-hidden="true">
+      <div class="modal fade" id="buildPizzaModal" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">hey</h5>
+              <h5 class="modal-title">RONNY PIZZA BUILDER</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body menu myModalContent">
+              <div class="">
+                <form id="buildPizzaForm">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <h5>Choose Topping</h5>
+                          <input type="checkbox" name="topping" value="0"> Hearty Marinara Sauce<br>
+                          <input type="checkbox" name="topping" value="1"> Ham<br>
+                          <input type="checkbox" name="topping" value="2"> Premium Chicken<br>
+                          <input type="checkbox" name="topping" value="3"> Salami<br>
+                          <input type="checkbox" name="topping" value="4"> Beef<br>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <h5>Choose Sauce</h5>
+                          <input type="checkbox" name="Sauce" value="0"> Riding a bike.<br>
+                          <input type="checkbox" name="Sauce" value="1"> BBQ Sauce<br>
+                          <input type="checkbox" name="Sauce" value="2">Garlic Parmesan White Sauce<br>
+                          <input type="checkbox" name="Sauce" value="3">Alfredo Sauce<br>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <h5>Chosse Cheese</h5>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="cheese" value="No Cheese" checked>
+                              No Cheese
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="cheese" value="Normal">
+                              Normal
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="cheese" value="Extra">
+                              Extra
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="cheese" value="Doble">
+                              Doble
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <h5>Pizza Size</h5>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="size" value='Small(10")' checked>
+                              Small(10")
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="size" value='Medium(12")'>
+                              Medium(12")
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="size" value='Large(14")'>
+                              Large(14")
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <button type="submit" class="btn">Add Order</button>
+                </form>
+              </div>
             </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Print</button>
+                <button type="submit" class="btn btn-secondary">Make Order</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
           </div>

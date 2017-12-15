@@ -84,6 +84,9 @@ Order.prototype.finnalPrice = function () {//this function calculates the final 
 
 
 $(function(){
-
+  $('#buildPizzaBtn').click(function(event){
+    event.preventDefault();
+    $('#buildPizzaModal').modal('toggle');
+  })
 
 })

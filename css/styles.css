@@ -25,3 +25,10 @@ p{
 .btn{
   margin: 5px;
 }
+.myModalContent{
+  border-color: white;
+  border-style: solid;
+  border-width: medium;
+  margin: 10px;
+  color: white;
+}
