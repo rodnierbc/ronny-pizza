@@ -11,7 +11,15 @@ _{The website allows Ronny Pizza customers to place orders online allowing the d
 ### Specs
 | Spec | Input | Output |
 | :-------------------- | :------------------- | :------------------------ |
-| **Program accepts as input to negative numbers but converts them into positives before processing it** | -12 | 12 |
+| **Program select a type of pizza** | Hawaiian|  true|
+| **Program select more than one type of pizza** | Hawaiian, Deluxe|  true, true|
+| **Program create your own type of pizza** | myPizzaType|  true|
+| **Program select toppings** | Pepperoni|  true|
+| **Program assign one topping to a pizza** | myPizzaType|  Pepperoni|
+| **Program assign more than one topping to a pizza** | myPizzaType|  Pepperoni, Salami|
+| **Program assigns size to a pizza** | myPizzaType|  small(10")|
+
+
 
 
 
