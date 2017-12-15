@@ -80,3 +80,10 @@ Order.prototype.finnalPrice = function () {//this function calculates the final 
   }
   return finnalPrice;
 };
+
+
+
+$(function(){
+
+
+})

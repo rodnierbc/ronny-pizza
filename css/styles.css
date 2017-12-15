@@ -1,0 +1,23 @@
+.main-img{
+  width: 70%;
+  height: auto;
+}
+.menu-img{
+  width: 100%;
+  height: auto;
+  margin: 10px;
+}
+.jumbotron{
+    background-color: white;
+    text-align: center;
+    color: red;
+    border-color: red;
+    border-style: solid;
+    border-width: medium;
+}
+.menu{
+  background-color: red;
+}
+p{
+  color: white;
+}
