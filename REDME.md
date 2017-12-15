@@ -19,12 +19,6 @@ _{The website allows Ronny Pizza customers to place orders online allowing the d
 | **Program assign more than one topping to a pizza** | myPizzaType|  Pepperoni, Salami|
 | **Program assigns size to a pizza** | myPizzaType|  small(10")|
 
-
-
-
-
-
-
 ## Setup/Installation Requirements
 
 * _cloned the repo
