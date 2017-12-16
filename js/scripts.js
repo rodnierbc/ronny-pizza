@@ -111,6 +111,20 @@ $(function(){
     pizza.pizzaSauces = pizzaSauces;
     pizza.pizzaRegularPrice = pizza.finnalPrice();
     items.push(pizza);
+    $("ul#items").append("<li><span class='items'>" + pizza.pizzaType + " $"+pizza.pizzaRegularPrice+"</span></li>");
+    $(".items").last().click(function() {
+        for(var i=0; i<pizza.pizzaToppings.length; i++){
+          alert();
+          $("ul#toppingsDescription").append("<li><h5>" + pizza.pizzaToppings[i] + "</h5></li>");
+        }
+        for(var i=0; i<pizza.pizzaSauces.length; i++){
+          $("ul#saucesDescription").append("<li><h5>"+ pizza.pizzaSauces[i] + "</h5></li>");
+        }
+        $('h5#pizzaType').text(pizza.pizzaType);
+        $('h5#pizzaSize').text(pizza.pizzaSize);
+        $('h5#pizzaCheeseSize').text(pizza.pizzaCheeseSize);
+
+      });
   });
 
 })

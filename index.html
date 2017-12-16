@@ -74,6 +74,19 @@
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Check your order items</h5>
+              <ul id="items"></ul>
+            </div>
+            <div class="col-md-6">
+              <h5 id="pizzaType"></h5>
+              <h5 id="pizzaSize"></h5>
+              <h5 id="pizzaCheeseSize"></h5>
+              <ul id="toppingsDescription"></ul>
+              <ul id="saucesDescription"></ul>
+            </div>
+          </div>
         </div>
       </div>
       <div class="modal fade" id="buildPizzaModal" role="dialog" aria-hidden="true">
@@ -92,20 +105,20 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <h5>Choose Topping</h5>
-                          <input type="checkbox" name="topping" value="0"> Hearty Marinara Sauce<br>
-                          <input type="checkbox" name="topping" value="1"> Ham<br>
-                          <input type="checkbox" name="topping" value="2"> Premium Chicken<br>
-                          <input type="checkbox" name="topping" value="3"> Salami<br>
-                          <input type="checkbox" name="topping" value="4"> Beef<br>
+                          <input type="checkbox" name="topping" value="Hearty Marinara Sauce"> Hearty Marinara Sauce<br>
+                          <input type="checkbox" name="topping" value="Ham"> Ham<br>
+                          <input type="checkbox" name="topping" value="Premium Chicken"> Premium Chicken<br>
+                          <input type="checkbox" name="topping" value="Salami"> Salami<br>
+                          <input type="checkbox" name="topping" value="Beef"> Beef<br>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <h5>Choose Sauce</h5>
-                          <input type="checkbox" name="sauce" value="0"> Riding a bike.<br>
-                          <input type="checkbox" name="sauce" value="1"> BBQ Sauce<br>
-                          <input type="checkbox" name="sauce" value="2"> Garlic Parmesan White Sauce<br>
-                          <input type="checkbox" name="sauce" value="3">Alfredo Sauce<br>
+                          <input type="checkbox" name="sauce" value="Riding a bike"> Riding a bike<br>
+                          <input type="checkbox" name="sauce" value="BBQ Sauce"> BBQ Sauce<br>
+                          <input type="checkbox" name="sauce" value="Garlic Parmesan White Sauce"> Garlic Parmesan White Sauce<br>
+                          <input type="checkbox" name="sauce" value="Alfredo Sauce">Alfredo Sauce<br>
                         </div>
                       </div>
                     </div>
