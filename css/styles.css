@@ -32,3 +32,17 @@ p{
   margin: 10px;
   color: white;
 }
+.description{
+  color: white;
+  margin-top: 10px;
+  background-color: red;
+}
+.customerRegister{
+  color: white;
+  margin-left: : 10px;
+  background-color: red;
+  float: left;
+}
+/*#description{
+  display: none;
+}*/
