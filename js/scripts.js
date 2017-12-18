@@ -12,7 +12,7 @@ const PIZZA_MY_OWN_TYPE = 'My Pizza Type'
 const PIZZA_REGULAR_PRICE = 4;
 
 //variables
-var costumer;
+var customer;
 var items =[];
 var order;
 var pizzaIdController =0;
@@ -69,8 +69,8 @@ Pizza.prototype.finnalPrice = function () {//this function calculates the final 
   return finnalPrice;
 };
 
-function Order(ordeCostumer, oderCode){
-  this.ordeCostumer = ordeCostumer;
+function Order(orderCostumer, oderCode){
+  this.orderCostumer = orderCostumer;
   this.orderItems =[];
   this.oderCode = oderCode;
 }
@@ -125,9 +125,22 @@ $(function(){
         $('h5#pizzaType').text(pizza.pizzaType);
         $('h5#pizzaSize').text(pizza.pizzaSize);
         $('h5#pizzaCheeseSize').text(pizza.pizzaCheeseSize);
-
-
       });
+    $('input[type=checkbox]').each(function() {
+        this.checked = false;
+    });
+  });
+  $('#deliveryInformationForm').submit(function(event){
+    event.preventDefault();
+    customerFirstName = $('#custumerFirstName').val();
+    customerLastName = $('#custumerLastName').val();
+    customerEmail = $('#customerEmail').val();
+    customerPhone = $('#custumerPhone').val();
+    customerAddres = $('#custumerAddres').val();
+    customerCity = $('#customerCity').val();
+    customerZipCode = $('#custumerZip').val();
+    customer = new Customer(customerFirstName, customerLastName, customerEmail, customerPhone, customerAddres,'OR', customerCity, customerZipCode);
+    alert(customer.customerCity);
   });
 
 })
