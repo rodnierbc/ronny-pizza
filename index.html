@@ -68,6 +68,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-md-4">
               <div class="row">
                 <div class="" alt="Responsive image">
@@ -75,10 +76,33 @@
                 </div>
               </div>
               <div class="row">
-                <div id="description" class="row customerRegister">
+                <div id="description" class="customerRegister">
                   <div class="form-group">
-                    <h5>Register</h5>
-
+                    <h5>Delivery Information</h5>
+                    <form id="registerPlayersForm">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h3>Player 1: 0</h3>
+                          <div class="row">
+                    				<div class="col-md-12">
+                    					<div class="form-group">
+                                <input type="text" name="first_name" id="firstNamePlayer1" class="form-control input-sm" placeholder="First Name">
+                    					</div>
+                    				</div>
+                    				<div class="col-md-12">
+                    					<div class="form-group">
+                    						<input type="text" name="last_name_player1" id="lastNamePlayer1" class="form-control input-sm" placeholder="Last Name">
+                    					</div>
+                    				</div>
+                    			</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <input type="submit" value="Register to start" class="btn">
+                        </div>
+                      </div>
+                		</form>
                   </div>
                 </div>
               </div>
@@ -87,14 +111,14 @@
           <div id="description" class="row description">
             <div class="col-md-6">
               <h5>Check your order items</h5>
-              <ul id="items"></ul>
+              <ul class="float-left" id="items"></ul>
             </div>
             <div class="col-md-6">
               <h5 id="pizzaType"></h5>
               <h5 id="pizzaSize"></h5>
               <h5 id="pizzaCheeseSize"></h5>
-              <ul id="toppingsDescription"></ul>
-              <ul id="saucesDescription"></ul>
+              <ul id="toppingsDescription" class="float-left"></ul>
+              <ul id="saucesDescription" class="float-left"></ul>
             </div>
           </div>
         </div>
